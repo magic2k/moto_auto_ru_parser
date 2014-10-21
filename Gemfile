@@ -13,7 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
-gem 'slim'
+# gem 'slim'
 gem 'slim-rails'
 gem 'bootstrap-sass'
 
@@ -24,6 +24,7 @@ gem 'nokogiri'
 
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rails_layout'
 end
 

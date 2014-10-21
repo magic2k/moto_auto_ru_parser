@@ -1,2 +1,9 @@
-h1 Offers#index
-p Find me in app/views/offers/index.html.slim
+h1 Offers
+p Create new offerSet or browse smthng
+
+= form_for @offer, url: {action: 'create'}, html: { class: 'form' } do |f|
+  = f.label 'Set name'
+  = f.text_field :name
+  = f.label 'search url'
+  = f.text_field :url
+  = f.submit

@@ -1,0 +1,18 @@
+h1 Moooo
+p moooooo
+
+
+div class="container"
+  div class="row"
+    = form_for @request, html: { class: 'form' } do |f|
+      = f.label 'Set name'
+      = f.text_field :name
+      = f.label 'search url'
+      = f.text_field :url
+      = f.submit
+
+  div class="row"
+    - @requests.each do |r|
+      p
+        = link_to r.name, r
+

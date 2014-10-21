@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'offers#index'
-  get 'offers/index'
+  root 'requests#index'
+  # root 'offers#index'
+  get 'requests/index'
 
-  get 'offers/show'
-
-  get 'offers/edit'
-
-  get 'offers/update'
+  resources :offers
+  resources :requests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
