@@ -12,7 +12,7 @@ offer_links = []
 
 doc.css('table.list>tr').each do |l|
   #price in the first <nobr>
-	l.css('nobr').each { |p| puts p.content; break;}
+	l.css('nobr').each { |p| puts p.content; break; }
 
   #link to offer and bike name in the same class string
 	l.css('.offer-list').each do |link|
@@ -20,10 +20,11 @@ doc.css('table.list>tr').each do |l|
 		puts link['href']
 		offer_links << link['href']
 	end
-	puts '____________next >___________________--'
+	puts '____________next >___________________________________'
 end
 
 #inside the first offer...
+puts 'inside the first offer...'
 
 offer = Nokogiri::HTML(open(offer_links[0]))
 puts offer.css('#card-year').each {|y| puts y.content; break }

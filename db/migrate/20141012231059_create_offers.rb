@@ -5,8 +5,9 @@ class CreateOffers < ActiveRecord::Migration
       t.string :url
       t.text :description
       t.decimal :year
+      t.decimal :price
       t.binary :image
-
+      t.integer :request_id
       t.timestamps
     end
   end

@@ -20,12 +20,16 @@ gem 'bootstrap-sass'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+
 gem 'nokogiri'
+# gem 'sidekiq'   #later
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rails_layout'
+  gem 'did_you_mean'
+  gem 'debase'
 end
 
 group :test do

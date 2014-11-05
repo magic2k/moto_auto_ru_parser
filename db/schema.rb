@@ -18,14 +18,16 @@ ActiveRecord::Schema.define(version: 20141018223212) do
     t.string   "url"
     t.text     "description"
     t.decimal  "year"
+    t.decimal  "price"
     t.binary   "image"
+    t.integer  "request_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "requests", force: true do |t|
     t.string   "name"
-    t.string   "url"
+    t.string   "req_url"
     t.text     "description"
     t.string   "email"
     t.datetime "created_at"
