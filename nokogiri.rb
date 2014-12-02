@@ -27,7 +27,22 @@ end
 puts 'inside the first offer...'
 
 offer = Nokogiri::HTML(open(offer_links[0]))
-puts offer.css('#card-year').each {|y| puts y.content; break }
+puts offer.css('#card-year').each {|y| puts y.content; break}
 offer.css('.cost').each do |c|
 	puts c.content
 end
+
+puts 'Here be photo: '
+offer.css('#show-big-photo').each {|p| @img_link =  p.attribute('src'); break}
+# offer.css('#show-big-photo').each do |p|
+# 	puts p.attribute('src')
+# 	# break
+# end
+puts @img_link
+puts 'open..'
+# img = open(@img_link)  #StringIO
+img = open(@img_link).read #String
+puts img.class
+
+
+

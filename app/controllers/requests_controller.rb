@@ -16,7 +16,7 @@ class RequestsController < ApplicationController
       flash[:success] = "Ok, request taken"
 
       # launch scan job
-      @request.parse(@request.req_url, @request.id)
+      @request.parse_request(@request.req_url, @request.id)
       # @request.parse(request_params.req_url , @request.id)
       redirect_to index
     else

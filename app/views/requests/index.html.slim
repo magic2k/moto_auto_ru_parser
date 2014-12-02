@@ -3,6 +3,7 @@ p moooooo
 
 
 div class="container"
+  = image_tag 'data:image/jpeg;base64,' + Base64.encode64(open('http://is17.auto.ru/all/images/f4/9e/456x342/f49e24e2.jpg').read)
   div class="row"
     = form_for @request, html: { class: 'form' } do |f|
       = f.label 'Set name'

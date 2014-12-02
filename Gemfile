@@ -30,6 +30,7 @@ group :development do
   gem 'rails_layout'
   gem 'did_you_mean'
   gem 'debase'
+  # gem 'curb'
 end
 
 group :test do

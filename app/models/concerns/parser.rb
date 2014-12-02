@@ -8,7 +8,7 @@ module Parser
   end
 
   #instance methods
-  def parse(req_url, request_id)
+  def parse_request(req_url, request_id)
     get_offers_from req_url, request_id
     save_offers
   end
@@ -35,6 +35,7 @@ module Parser
     # @new_offers
   end
 
+  # TODO: verify db write
   def save_offers
     @new_offers.each do |offer|
       offer.save
