@@ -31,5 +31,10 @@ module MotoAutoRuParser
       g.template_engine :slim
       g.test_framework :rspec, fixture: false
     end
+
+    console do
+      require 'pry'
+      config.console = Pry
+    end
   end
 end
