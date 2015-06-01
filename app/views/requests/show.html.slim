@@ -1,6 +1,9 @@
 div class="container"
   div class="row"
     div class="col-md-8"
+      =@offers.last.request.req_url
+      br
       -@offers.each do |offer|
-        =offer.name
+        =link_to offer.name, offer_path(offer)
+
         br

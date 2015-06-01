@@ -37,6 +37,8 @@ module Parser
 
   # TODO: verify db write
   def save_offers
+    # delete nil elements, first one usually
+    @new_offers.delete_if{|o| o.name.nil?}
     @new_offers.each do |offer|
       offer.save
     end
